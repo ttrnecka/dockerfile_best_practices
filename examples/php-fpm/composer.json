@@ -1,0 +1,12 @@
+{
+  "name": "example/php-fpm",
+  "type": "project",
+  "require": {
+    "php": "^8.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Example\\": "src/"
+    }
+  }
+}

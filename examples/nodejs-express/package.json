@@ -1,0 +1,12 @@
+{
+  "name": "express-api-example",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "dependencies": {
+    "express": "5.1.0"
+  }
+}

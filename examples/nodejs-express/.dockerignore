@@ -1,0 +1,7 @@
+.git
+.env*
+.npmrc*
+node_modules/
+coverage/
+test/
+tests/
