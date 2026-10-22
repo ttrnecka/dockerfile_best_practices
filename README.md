@@ -1,18 +1,22 @@
 # General Dockerfile Best Practices
 
-This guide is for DevOps engineers building images for different applications and languages. It covers practices that apply broadly; language-specific commands, base images, and version choices belong in later guides.
+This repository provides language-agnostic Dockerfile practices, seven ecosystem-specific guides, and an independently buildable sample for each guide. The guide-specific version targets, image choices, and validation recipes are documented alongside each example.
 
-## Application-Specific Guides
+## Application Guides and Samples
 
-Use the general practices here as a foundation, then see the matching guide for ecosystem-specific decisions:
+Use the general practices here as a foundation, then consult the matching guide for ecosystem-specific decisions and build/run checks. Each sample directory is its own Docker build context; run its guide's commands from that directory.
 
-- [Python web API (FastAPI)](guides/python-fastapi.md)
-- [Node.js web API (Express)](guides/nodejs-express.md)
-- [Go web service (standard library HTTP server)](guides/go-http-service.md)
-- [Java web API (Spring Boot)](guides/java-spring-boot.md)
-- [.NET web API (ASP.NET Core)](guides/dotnet-aspnet-core.md)
-- [PHP web application (PHP-FPM)](guides/php-fpm.md)
-- [Rust web service (Axum)](guides/rust-axum.md)
+| Application | Guide | Buildable sample |
+| --- | --- | --- |
+| Python web API (FastAPI) | [Guide](guides/python-fastapi.md) | [Sample](examples/python-fastapi/) |
+| Node.js web API (Express) | [Guide](guides/nodejs-express.md) | [Sample](examples/nodejs-express/) |
+| Go web service (standard library HTTP server) | [Guide](guides/go-http-service.md) | [Sample](examples/go-http-service/) |
+| Java web API (Spring Boot) | [Guide](guides/java-spring-boot.md) | [Sample](examples/java-spring-boot/) |
+| .NET web API (ASP.NET Core) | [Guide](guides/dotnet-aspnet-core.md) | [Sample](examples/dotnet-aspnet-core/) |
+| PHP web application (PHP-FPM) | [Guide](guides/php-fpm.md) | [Sample](examples/php-fpm/) |
+| Rust web service (Axum) | [Guide](guides/rust-axum.md) | [Sample](examples/rust-axum/) |
+
+The HTTP samples implement `GET /` and `GET /healthz`. PHP-FPM speaks FastCGI rather than HTTP; its guide describes direct FastCGI checks and intentionally does not publish port 9000 to the host.
 
 The snippets are illustrative, not complete buildable images. Replace example image names, files, and commands with those required by the application.
 
